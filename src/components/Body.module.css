@@ -1,0 +1,34 @@
+.addTasks {
+  background: var(--gray-back);
+  display: flex;
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 23%;
+  right: 25%;
+}
+
+input {
+  width: 638px;
+  height: 54px;
+  border-radius: 5px;
+  background: var(--gray-500);
+  border: none;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  width: 90px;
+  height: 54px;
+  border-radius: 10px;
+  background: var(--blue-dark);
+  color: var(--white);
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+.header {
+  background: var(--gray-700);
+  width: auto;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageOne {
+  width: 126px;
+  height: 46px;
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
