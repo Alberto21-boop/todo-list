@@ -51,10 +51,12 @@ export function TaskList() {
               <li key={index} className={styles.taskItem}>
                 <input
                   className={styles.list}
-                  type="radio"
+                  id="checkboxId"
+                  type="checkbox"
                   checked={completedTasks.includes(task)}
                   onChange={() => handleCompleteTask(index)}
                 />
+                <label htmlFor="checkboxId" />
                 <span className={styles.taskText}>{task}</span>
                 <button onClick={() => handleDeleteTask(index)}>
                   <Trash className={styles.trash} size={24} />
