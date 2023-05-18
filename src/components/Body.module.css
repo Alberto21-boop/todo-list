@@ -4,9 +4,8 @@
   gap: 8px;
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 23%;
-  right: 25%;
+  padding: 0 24px;
+  margin-top: -36px;
 }
 
 input {
@@ -16,6 +15,7 @@ input {
   background: var(--gray-500);
   border: none;
   margin-top: 10px;
+  padding: 0 16px;
 }
 
 button[type="submit"] {

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Body } from "./Body";
 import styles from "./TaskList.module.css";
 import clip from "../assets/Clipboard.svg";
+import { Trash } from "phosphor-react";
 
 export function TaskList() {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -33,9 +34,12 @@ export function TaskList() {
       />
 
       <div className={styles.accountants}>
-        <h3 className={styles.firstH3}>Tarefas Criadas: {tasks.length}</h3>
+        <h3 className={styles.firstH3}>
+          Tarefas Criadas{" "}
+          <span className={styles.taskCount}>{tasks.length}</span>
+        </h3>
         <h3 className={styles.secondH3}>
-          Tarefas Concluídas:{" "}
+          Tarefas Concluídas{" "}
           {tasks.length > 0 ? `${completedTasks.length} de ${tasks.length}` : 0}
         </h3>
       </div>
@@ -44,13 +48,16 @@ export function TaskList() {
         <div>
           <ul>
             {tasks.map((task: string, index: number) => (
-              <li key={index}>
-                {task}
+              <li key={index} className={styles.taskItem}>
+                <input
+                  className={styles.list}
+                  type="radio"
+                  checked={completedTasks.includes(task)}
+                  onChange={() => handleCompleteTask(index)}
+                />
+                <span className={styles.taskText}>{task}</span>
                 <button onClick={() => handleDeleteTask(index)}>
-                  Excluir Tarefa
-                </button>
-                <button onClick={() => handleCompleteTask(index)}>
-                  Concluir Tarefa
+                  <Trash className={styles.trash} size={24} />
                 </button>
               </li>
             ))}
@@ -59,7 +66,7 @@ export function TaskList() {
       ) : (
         <div className={styles.dowElements}>
           <hr />
-          <div>
+          <div className={styles.notTasks}>
             <img className={styles.clipImage} src={clip} alt="" />
             <strong>Você ainda não tem tarefas cadastradas</strong>
             <p>Crie tarefas e organize seus itens a fazer</p>
