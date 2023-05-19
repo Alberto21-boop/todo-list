@@ -7,7 +7,7 @@ import { Checkbox } from "./Checkbox";
 
 export function TaskList() {
   const [tasks, setTasks] = useState<string[]>([]);
-  const [completedTasks, setCompletedTasks] = useState<string[]>([]);
+  const [completedTasks, setCompletedTasks] = useState<number[]>([]);
 
   function handleDeleteTask(index: number) {
     setTasks((prevTasks) => {
@@ -20,8 +20,8 @@ export function TaskList() {
   function handleCompleteTask(index: number, isChecked: boolean) {
     setCompletedTasks((prevCompletedTasks) => {
       const updatedCompletedTasks = isChecked
-        ? [...prevCompletedTasks, tasks[index]]
-        : prevCompletedTasks.filter((task) => task !== tasks[index]);
+        ? [...prevCompletedTasks, index]
+        : prevCompletedTasks.filter((taskIndex) => taskIndex !== index);
       return updatedCompletedTasks;
     });
   }
@@ -41,7 +41,11 @@ export function TaskList() {
         </h3>
         <h3 className={styles.secondH3}>
           Tarefas Concluídas{" "}
-          {tasks.length > 0 ? `${completedTasks.length} de ${tasks.length}` : 0}
+          <span className={styles.taskContSecond}>
+            {tasks.length > 0
+              ? `${completedTasks.length} de ${tasks.length}`
+              : 0}
+          </span>
         </h3>
       </div>
 
@@ -51,18 +55,20 @@ export function TaskList() {
             {tasks.map((task: string, index: number) => (
               <li key={index} className={styles.taskItem}>
                 <Checkbox
-                  checked={completedTasks.includes(task)}
+                  checked={completedTasks.includes(index)}
                   onChange={(checked) => handleCompleteTask(index, checked)}
                 />
 
-                {/* <input
-                  className={styles.list}
-                  type="checkbox"
-                  checked={completedTasks.includes(task)}
-                  onChange={(e) => handleCompleteTask(index, e.target.checked)}
-                /> */}
+                <span
+                  className={`${styles.taskText} ${
+                    completedTasks.includes(index)
+                      ? styles.taskTextCompleted
+                      : ""
+                  }`}
+                >
+                  {task}
+                </span>
 
-                <span className={styles.taskText}>{task}</span>
                 <button onClick={() => handleDeleteTask(index)}>
                   <Trash className={styles.trash} size={24} />
                 </button>

@@ -13,7 +13,12 @@ export function Checkbox({ checked = false, onChange }: CheckboxProps) {
 
   return (
     <label className={styles.customCheckbox}>
-      <input type="checkbox" checked={checked} onClick={handleClick} />
+      <input
+        className={styles.taskCheck}
+        type="checkbox"
+        checked={checked}
+        onClick={handleClick}
+      />
       <span />
     </label>
   );

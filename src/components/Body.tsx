@@ -25,6 +25,7 @@ export function Body({ setTasks }: BodyProps) {
       <form onSubmit={handleCreateNewTask}>
         <div className={styles.addTasks}>
           <input
+            className={styles.textInput}
             type="text"
             value={newTask}
             onChange={(event) => setNewTask(event.target.value)}

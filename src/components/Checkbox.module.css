@@ -71,8 +71,3 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
-input[type="checkbox"]:checked + .taskText {
-  text-decoration: line-through;
-  color: var(--gray-400);
-}
