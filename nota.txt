@@ -1,2 +1,3 @@
 Para o icone de lixo para deletar a tarefa é necessario rodar um 
 npm install --save phosphor-react
+

@@ -3,6 +3,7 @@ import { Body } from "./Body";
 import styles from "./TaskList.module.css";
 import clip from "../assets/Clipboard.svg";
 import { Trash } from "phosphor-react";
+import { Checkbox } from "./Checkbox";
 
 export function TaskList() {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -16,13 +17,13 @@ export function TaskList() {
     });
   }
 
-  function handleCompleteTask(index: number) {
+  function handleCompleteTask(index: number, isChecked: boolean) {
     setCompletedTasks((prevCompletedTasks) => {
-      const updatedCompletedTasks = [...prevCompletedTasks, tasks[index]];
+      const updatedCompletedTasks = isChecked
+        ? [...prevCompletedTasks, tasks[index]]
+        : prevCompletedTasks.filter((task) => task !== tasks[index]);
       return updatedCompletedTasks;
     });
-
-    handleDeleteTask(index);
   }
 
   return (
@@ -49,14 +50,18 @@ export function TaskList() {
           <ul>
             {tasks.map((task: string, index: number) => (
               <li key={index} className={styles.taskItem}>
-                <input
+                <Checkbox
+                  checked={completedTasks.includes(task)}
+                  onChange={(checked) => handleCompleteTask(index, checked)}
+                />
+
+                {/* <input
                   className={styles.list}
-                  id="checkboxId"
                   type="checkbox"
                   checked={completedTasks.includes(task)}
-                  onChange={() => handleCompleteTask(index)}
-                />
-                <label htmlFor="checkboxId" />
+                  onChange={(e) => handleCompleteTask(index, e.target.checked)}
+                /> */}
+
                 <span className={styles.taskText}>{task}</span>
                 <button onClick={() => handleDeleteTask(index)}>
                   <Trash className={styles.trash} size={24} />
