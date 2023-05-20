@@ -37,11 +37,11 @@ export function TaskList() {
       <div className={styles.accountants}>
         <h3 className={styles.firstH3}>
           Tarefas Criadas{" "}
-          <span className={styles.taskCount}>{tasks.length}</span>
+          <span className={styles.markCount}>{tasks.length}</span>
         </h3>
         <h3 className={styles.secondH3}>
           Tarefas Concluídas{" "}
-          <span className={styles.taskContSecond}>
+          <span className={styles.markContSecond}>
             {tasks.length > 0
               ? `${completedTasks.length} de ${tasks.length}`
               : 0}

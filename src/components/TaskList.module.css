@@ -44,6 +44,20 @@ p {
   color: var(--gray-300);
 }
 
+.markCount {
+  width: 24px;
+  height: 19px;
+  background: var(--gray-400);
+  border-radius: 5px;
+}
+
+.markContSecond {
+  width: 24px;
+  height: 19px;
+  background: var(--gray-400);
+  border-radius: 5px;
+}
+
 .accountants {
   width: 800px;
   display: flex;
@@ -60,20 +74,6 @@ p {
 
 .secondH3 {
   color: var(--purple);
-}
-
-.taskCount {
-  width: 24px;
-  height: 19px;
-  background: var(--gray-400);
-  border-radius: 5px;
-}
-
-.taskContSecond {
-  width: 24px;
-  height: 19px;
-  background: var(--gray-400);
-  border-radius: 5px;
 }
 
 .taskItem {
