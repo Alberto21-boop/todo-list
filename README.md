@@ -6,7 +6,7 @@
     alt="React Ver. ^18.2.0"
   />
  
-  <img 
+  <img align="center"
     src="https://img.shields.io/badge/Typescript-%5E5.0.4-blue"
     alt="Typescript Ver. 5.0.4" 
   />
@@ -14,7 +14,7 @@
     src="https://img.shields.io/badge/Ignite-2023-green" 
     alt="Ignite-2023"
   />
-  <img 
+  <img align="center"
     alt="License"
     src="https://img.shields.io/static/v1?label=license&message=MIT&color=E51C44&labelColor=0A1033"
   />
@@ -34,6 +34,7 @@
 
 ![image](https://github.com/Alberto21-boop/todo-list/assets/85910024/19bd2351-ffa1-4d51-a038-e7987364510b)
 
+![image](https://github.com/Alberto21-boop/todo-list/assets/85910024/c38b9249-a6ad-49bd-9191-e89b4a21f709)
 
 
 
