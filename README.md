@@ -5,8 +5,7 @@
     src="https://img.shields.io/badge/React-%5E18.2.6-blue" 
     alt="React Ver. ^18.2.0"
   />
- 
-  <img align="center"
+  <img 
     src="https://img.shields.io/badge/Typescript-%5E5.0.4-blue"
     alt="Typescript Ver. 5.0.4" 
   />
@@ -14,7 +13,7 @@
     src="https://img.shields.io/badge/Ignite-2023-green" 
     alt="Ignite-2023"
   />
-  <img align="center"
+  <img 
     alt="License"
     src="https://img.shields.io/static/v1?label=license&message=MIT&color=E51C44&labelColor=0A1033"
   />
