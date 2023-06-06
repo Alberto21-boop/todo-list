@@ -5,10 +5,7 @@
     src="https://img.shields.io/badge/React-%5E18.2.6-blue" 
     alt="React Ver. ^18.2.0"
   />
-   <img 
-    src="https://img.shields.io/badge/NextJS-%5E13.4.2-black" 
-    alt="NextJS Ver. ^13.4.2"
-  />
+ 
   <img 
     src="https://img.shields.io/badge/Typescript-%5E5.0.4-blue"
     alt="Typescript Ver. 5.0.4" 
@@ -34,9 +31,9 @@
 <br>
 
 <h1 align="center">Imagem prévia da aplicação</h1>
-<h3 align="center"><img src='todoList01.png'></h3>
 
-<h3 align="center"><img src='todoList02.png'></h3>
+![image](https://github.com/Alberto21-boop/todo-list/assets/85910024/19bd2351-ffa1-4d51-a038-e7987364510b)
+
 
 
 
