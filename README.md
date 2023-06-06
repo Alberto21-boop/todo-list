@@ -33,11 +33,12 @@
 
 <br>
 
+<h1 align="center">Imagem prévia da aplicação</h1>
 <h3 align="center"><img src='todoList01.png'></h3>
 
 <h3 align="center"><img src='todoList02.png'></h3>
 
-![cover](.github/project-preview.png?style=flat)
+
 
 <br>
 
